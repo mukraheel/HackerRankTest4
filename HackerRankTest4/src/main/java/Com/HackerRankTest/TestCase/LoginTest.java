@@ -2,10 +2,14 @@ package Com.HackerRankTest.TestCase;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -55,7 +59,7 @@ public class LoginTest extends BaseClass{
 	}
 	
 	
-	@Test
+	@Test (enabled = false)
 	public void CreateAccountTest() throws IOException
 	{
 		System.out.println("inside loginTest");
@@ -97,7 +101,10 @@ public class LoginTest extends BaseClass{
 	public void LoginDDFReadExcelData() throws IOException {
 		try {
 
-			String ExcelData = null;
+			
+			
+			String ExcelDataemail = null;
+			String ExcelDatapwd = null;
 
 			File src = new File("configs/LoginData.xlsx");
 
@@ -123,24 +130,22 @@ public class LoginTest extends BaseClass{
 				
 				// Create a loop to print cell values in a row
 				
-				if(row==null){
-                    sh1.getRow(i+1);
-                     continue;
-                 }
-				
-				for (int j = 0; j < row.getLastCellNum(); j++) {
+				for (int j = 1; j < row.getLastCellNum(); j++) {
 					
 					// Print Excel data in console
-					ExcelData = row.getCell(j).getStringCellValue();
+					ExcelDataemail =  sh1.getRow(j).getCell(0).getStringCellValue();  //row.getCell(j).getStringCellValue();
+					System.out.println("ExcelDataemail :" + ExcelDataemail);
+					
+					ExcelDatapwd =  sh1.getRow(j).getCell(1).getStringCellValue();  //row.getCell(j).getStringCellValue();
+					System.out.println("ExcelDatapwd :" + ExcelDatapwd);
 					
 					LoginDDT lp = new LoginDDT(driver);
-					System.out.println("after loginpage object");
+					System.out.println("after LoginDDFReadExcelData object");
 					
 					lp.loginlink();
-					lp.setEmailaddress(DataProviderFactory.getRandomDataProperty().getValue("Emailaddress"));
-					lp.settxtpassword(DataProviderFactory.getRandomDataProperty().getValue("Password"));
+					lp.setEmailaddress(ExcelDataemail);
+					lp.settxtpassword(ExcelDatapwd);
 					lp.clickBtn();
-					
 				}
 				break;
 			}
@@ -158,6 +163,16 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
+	
+	
+	
+	
+	public void DDTest() throws IOException
+	{
+		LoginDDFReadExcelData();
+		
+		
+	}
 	
 	
 	

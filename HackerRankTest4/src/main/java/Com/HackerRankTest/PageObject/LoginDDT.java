@@ -1,5 +1,7 @@
 package Com.HackerRankTest.PageObject;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +15,7 @@ public class LoginDDT {
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
     
 	@FindBy(xpath="//*[@id=\"gnav-header-inner\"]/div[4]/nav/ul/li[1]/button")
@@ -31,11 +33,13 @@ public class LoginDDT {
 	
 	public void setEmailaddress(String username)
 	{
+		txtEmailaddress.sendKeys("");
 		txtEmailaddress.sendKeys(username);
 	}
 	
 	public void settxtpassword(String password)
 	{
+		txtpassword.sendKeys("");
 		txtpassword.sendKeys(password);
 	}
 	
@@ -46,6 +50,7 @@ public class LoginDDT {
 	
 	public void loginlink()
 	{
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		loginlink.click();
 	}
 	
