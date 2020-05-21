@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
 import Com.HackerRankTest.DataProviderFactory.DataProviderFactory;
+import Com.HackerRankTest.PageObject.LoginDDT;
 import Com.HackerRankTest.PageObject.LoginPage;
 
 public class LoginTest extends BaseClass{
@@ -92,12 +93,13 @@ public class LoginTest extends BaseClass{
 	}
 	
 	
-	public void ReadExcelData() throws IOException {
+	@Test
+	public void LoginDDFReadExcelData() throws IOException {
 		try {
 
 			String ExcelData = null;
 
-			File src = new File("configs/SalesforceData.xlsx");
+			File src = new File("configs/LoginData.xlsx");
 
 			// load file
 			FileInputStream fis = new FileInputStream(src);
@@ -131,16 +133,14 @@ public class LoginTest extends BaseClass{
 					// Print Excel data in console
 					ExcelData = row.getCell(j).getStringCellValue();
 					
-
-					if (row.getCell(j) != null && (row.getCell(j).toString().equalsIgnoreCase(ExcelData))) {
-						sh1.removeRow(row);
-						//sh1.shiftRows( 4, sh1.getLastRowNum(), -1);
-						
-						System.out.println("Data Remove :" + ExcelData);
-						// sheet.shiftRows(i, lastIndex, -1);
-						
-						
-					}
+					LoginDDT lp = new LoginDDT(driver);
+					System.out.println("after loginpage object");
+					
+					lp.loginlink();
+					lp.setEmailaddress(DataProviderFactory.getRandomDataProperty().getValue("Emailaddress"));
+					lp.settxtpassword(DataProviderFactory.getRandomDataProperty().getValue("Password"));
+					lp.clickBtn();
+					
 				}
 				break;
 			}
@@ -157,6 +157,8 @@ public class LoginTest extends BaseClass{
 
 		}
 	}
+	
+	
 	
 	
 
