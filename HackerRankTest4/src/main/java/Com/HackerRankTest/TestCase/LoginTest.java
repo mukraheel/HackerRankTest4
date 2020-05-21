@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
@@ -63,15 +65,15 @@ public class LoginTest extends BaseClass{
 		
 		lp.loginlink();
 		lp.Reglink();
-		lp.setEmailaddress(DataProviderFactory.getRandomDataProperty().getValue("Emailaddress"));
+		//lp.setEmailaddress(DataProviderFactory.getRandomDataProperty().getValue("Emailaddress"));
 		lp.setFirstname(DataProviderFactory.getRandomDataProperty().getValue("Firstname"));
 		lp.setPasswoard(DataProviderFactory.getRandomDataProperty().getValue("Password"));
 		lp.clickBtn();
 		
 		System.out.println("Click on Submit Button");
 		
-		/*
-		if(driver.getTitle().equals(""))
+		
+		if(driver.findElement(By.id("aria-join_neu_email_field-error")).getText().equals("Can't be blank."))
 		{
 			Assert.assertTrue(true);
 			System.out.println("inside true condition");
@@ -80,8 +82,15 @@ public class LoginTest extends BaseClass{
 		{
 			Assert.assertTrue(false);
 			System.out.println("inside false condition");
-		}*/
+		}
 			
+	}
+	
+	@Test 
+	public void requiredFilds()
+	{
+		 driver.findElement(By.id("aria-join_neu_email_field-error")).getText();
+		
 	}
 
 }
