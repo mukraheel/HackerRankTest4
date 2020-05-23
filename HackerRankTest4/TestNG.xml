@@ -6,9 +6,9 @@
 	<test name="LoginCase">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<!-- <class name="Com.HackerRankTest.TestCase.LoginTest"/> 
+			 <class name="Com.HackerRankTest.TestCase.LoginTest"/> 
 			 <class name="Com.HackerRankTest.TestCase.TestRequiredFilds"/>  
-			 <class name="Com.HackerRankTest.TestCase.DDTestCase"/> -->
+			 <class name="Com.HackerRankTest.TestCase.DDTestCase"/> 
 			 <class name="Com.HackerRankTest.TestCase.TestCaseAddProduct"/>
 			 
 		</classes>

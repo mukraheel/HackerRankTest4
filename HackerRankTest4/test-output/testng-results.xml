@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="12" total="16" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Test Suite" duration-ms="40040" started-at="2020-05-23T16:27:06 PKT" finished-at="2020-05-23T16:27:46 PKT">
+  <suite name="Test Suite" duration-ms="132293" started-at="2020-05-23T16:31:11 PKT" finished-at="2020-05-23T16:33:23 PKT">
     <groups>
     </groups>
-    <test name="LoginCase" duration-ms="40040" started-at="2020-05-23T16:27:06 PKT" finished-at="2020-05-23T16:27:46 PKT">
-      <class name="Com.HackerRankTest.TestCase.TestCaseAddProduct">
-        <test-method status="PASS" signature="testBeforeSuite()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="testBeforeSuite" is-config="true" duration-ms="49" started-at="2020-05-23T16:27:06 PKT" finished-at="2020-05-23T16:27:06 PKT">
+    <test name="LoginCase" duration-ms="132293" started-at="2020-05-23T16:31:11 PKT" finished-at="2020-05-23T16:33:23 PKT">
+      <class name="Com.HackerRankTest.TestCase.LoginTest">
+        <test-method status="PASS" signature="testBeforeSuite()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="testBeforeSuite" is-config="true" duration-ms="38" started-at="2020-05-23T16:31:11 PKT" finished-at="2020-05-23T16:31:11 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBeforeSuite -->
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="setExtent" is-config="true" duration-ms="1" started-at="2020-05-23T16:27:06 PKT" finished-at="2020-05-23T16:27:06 PKT">
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="setExtent" is-config="true" duration-ms="1" started-at="2020-05-23T16:31:11 PKT" finished-at="2020-05-23T16:31:11 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="setup" is-config="true" duration-ms="20944" started-at="2020-05-23T16:27:06 PKT" finished-at="2020-05-23T16:27:27 PKT">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="setup" is-config="true" duration-ms="17176" started-at="2020-05-23T16:31:11 PKT" finished-at="2020-05-23T16:31:28 PKT">
           <params>
             <param index="0">
               <value>
@@ -26,38 +26,146 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Setup()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="Setup" is-config="true" duration-ms="0" started-at="2020-05-23T16:27:27 PKT" finished-at="2020-05-23T16:27:27 PKT">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="Setup" is-config="true" duration-ms="1" started-at="2020-05-23T16:31:28 PKT" finished-at="2020-05-23T16:31:28 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="CaseAddProduct()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="CaseAddProduct" duration-ms="18203" started-at="2020-05-23T16:27:27 PKT" finished-at="2020-05-23T16:27:46 PKT">
+        <test-method status="PASS" signature="CreateAccountTest()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="CreateAccountTest" duration-ms="9908" started-at="2020-05-23T16:31:28 PKT" finished-at="2020-05-23T16:31:38 PKT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CaseAddProduct -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="tearDown" is-config="true" duration-ms="2" started-at="2020-05-23T16:27:46 PKT" finished-at="2020-05-23T16:27:46 PKT">
+        </test-method> <!-- CreateAccountTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="tearDown" is-config="true" duration-ms="4" started-at="2020-05-23T16:31:38 PKT" finished-at="2020-05-23T16:31:38 PKT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CaseAddProduct status=SUCCESS method=TestCaseAddProduct.CaseAddProduct()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec] output={null}]]]>
+                <![CDATA[[TestResult name=CreateAccountTest status=SUCCESS method=LoginTest.CreateAccountTest()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="tearDown" is-config="true" duration-ms="577" started-at="2020-05-23T16:27:46 PKT" finished-at="2020-05-23T16:27:46 PKT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="tearDown" is-config="true" duration-ms="313" started-at="2020-05-23T16:31:38 PKT" finished-at="2020-05-23T16:31:38 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="AfterTest()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="AfterTest" is-config="true" duration-ms="0" started-at="2020-05-23T16:27:46 PKT" finished-at="2020-05-23T16:27:46 PKT">
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="AfterTest" is-config="true" duration-ms="1" started-at="2020-05-23T16:33:23 PKT" finished-at="2020-05-23T16:33:23 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@704a52ec]" name="testAfterSuite" is-config="true" duration-ms="0" started-at="2020-05-23T16:27:47 PKT" finished-at="2020-05-23T16:27:47 PKT">
+        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:Com.HackerRankTest.TestCase.LoginTest@7a1ebcd8]" name="testAfterSuite" is-config="true" duration-ms="2" started-at="2020-05-23T16:33:23 PKT" finished-at="2020-05-23T16:33:23 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAfterSuite -->
+      </class> <!-- Com.HackerRankTest.TestCase.LoginTest -->
+      <class name="Com.HackerRankTest.TestCase.TestRequiredFilds">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:Com.HackerRankTest.TestCase.TestRequiredFilds@5faeada1]" name="setup" is-config="true" duration-ms="11907" started-at="2020-05-23T16:31:38 PKT" finished-at="2020-05-23T16:31:50 PKT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Setup()[pri:0, instance:Com.HackerRankTest.TestCase.TestRequiredFilds@5faeada1]" name="Setup" is-config="true" duration-ms="0" started-at="2020-05-23T16:31:50 PKT" finished-at="2020-05-23T16:31:50 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="RequiredFilds()[pri:0, instance:Com.HackerRankTest.TestCase.TestRequiredFilds@5faeada1]" name="RequiredFilds" duration-ms="3880" started-at="2020-05-23T16:31:50 PKT" finished-at="2020-05-23T16:31:54 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RequiredFilds -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Com.HackerRankTest.TestCase.TestRequiredFilds@5faeada1]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-05-23T16:31:54 PKT" finished-at="2020-05-23T16:31:54 PKT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RequiredFilds status=SUCCESS method=TestRequiredFilds.RequiredFilds()[pri:0, instance:Com.HackerRankTest.TestCase.TestRequiredFilds@5faeada1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.HackerRankTest.TestCase.TestRequiredFilds@5faeada1]" name="tearDown" is-config="true" duration-ms="154" started-at="2020-05-23T16:31:54 PKT" finished-at="2020-05-23T16:31:54 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Com.HackerRankTest.TestCase.TestRequiredFilds -->
+      <class name="Com.HackerRankTest.TestCase.TestCaseAddProduct">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@ea1a8d5]" name="setup" is-config="true" duration-ms="15211" started-at="2020-05-23T16:32:44 PKT" finished-at="2020-05-23T16:33:00 PKT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Setup()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@ea1a8d5]" name="Setup" is-config="true" duration-ms="1" started-at="2020-05-23T16:33:00 PKT" finished-at="2020-05-23T16:33:00 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="CaseAddProduct()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@ea1a8d5]" name="CaseAddProduct" duration-ms="19154" started-at="2020-05-23T16:33:00 PKT" finished-at="2020-05-23T16:33:19 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CaseAddProduct -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@ea1a8d5]" name="tearDown" is-config="true" duration-ms="4" started-at="2020-05-23T16:33:19 PKT" finished-at="2020-05-23T16:33:19 PKT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CaseAddProduct status=SUCCESS method=TestCaseAddProduct.CaseAddProduct()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@ea1a8d5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.HackerRankTest.TestCase.TestCaseAddProduct@ea1a8d5]" name="tearDown" is-config="true" duration-ms="4200" started-at="2020-05-23T16:33:19 PKT" finished-at="2020-05-23T16:33:23 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- Com.HackerRankTest.TestCase.TestCaseAddProduct -->
+      <class name="Com.HackerRankTest.TestCase.DDTestCase">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:Com.HackerRankTest.TestCase.DDTestCase@528931cf]" name="setup" is-config="true" duration-ms="15990" started-at="2020-05-23T16:31:54 PKT" finished-at="2020-05-23T16:32:10 PKT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Setup()[pri:0, instance:Com.HackerRankTest.TestCase.DDTestCase@528931cf]" name="Setup" is-config="true" duration-ms="1" started-at="2020-05-23T16:32:10 PKT" finished-at="2020-05-23T16:32:10 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="LoginDDFReadExcelData()[pri:0, instance:Com.HackerRankTest.TestCase.DDTestCase@528931cf]" name="LoginDDFReadExcelData" duration-ms="30206" started-at="2020-05-23T16:32:10 PKT" finished-at="2020-05-23T16:32:40 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginDDFReadExcelData -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Com.HackerRankTest.TestCase.DDTestCase@528931cf]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-05-23T16:32:40 PKT" finished-at="2020-05-23T16:32:40 PKT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LoginDDFReadExcelData status=SUCCESS method=DDTestCase.LoginDDFReadExcelData()[pri:0, instance:Com.HackerRankTest.TestCase.DDTestCase@528931cf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.HackerRankTest.TestCase.DDTestCase@528931cf]" name="tearDown" is-config="true" duration-ms="4102" started-at="2020-05-23T16:32:40 PKT" finished-at="2020-05-23T16:32:44 PKT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Com.HackerRankTest.TestCase.DDTestCase -->
     </test> <!-- LoginCase -->
   </suite> <!-- Test Suite -->
 </testng-results>
