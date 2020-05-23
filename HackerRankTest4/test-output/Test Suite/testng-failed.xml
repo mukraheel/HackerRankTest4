@@ -4,7 +4,7 @@
   <test thread-count="5" name="LoginCase(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Com.HackerRankTest.TestCase.LoginTest">
+      <class name="Com.HackerRankTest.TestCase.TestCaseAddProduct">
         <methods>
           <include name="Setup"/>
           <include name="tearDown"/>
@@ -14,9 +14,9 @@
           <include name="setExtent"/>
           <include name="setup"/>
           <include name="testAfterSuite"/>
-          <include name="requiredFilds"/>
+          <include name="CaseAddProduct"/>
         </methods>
-      </class> <!-- Com.HackerRankTest.TestCase.LoginTest -->
+      </class> <!-- Com.HackerRankTest.TestCase.TestCaseAddProduct -->
     </classes>
   </test> <!-- LoginCase(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

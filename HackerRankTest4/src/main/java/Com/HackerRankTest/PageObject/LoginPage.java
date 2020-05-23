@@ -35,6 +35,12 @@ WebDriver driver;
 	@FindBy(name="submit_attempt")
 	WebElement btnLogin;
 	
+	@FindBy(xpath ="//*[@id=\"gnav-header-inner\"]/div[4]/ul/li[4]/a")
+	WebElement profilelink;
+	
+	@FindBy(xpath ="//*[@id=\"sub-nav-user-menu-462857-4\"]")
+	WebElement Logoutlink;
+	
 	public void setEmailaddress(String username)
 	{
 		txtEmailaddress.sendKeys(username);
@@ -63,8 +69,31 @@ WebDriver driver;
 	
 	public void Reglink()
 	{
-		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Reglink.click();
 	}
-
+	
+	public void Logout()
+	{
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		profilelink.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElement(By.linkText("Sign out")).click();
+		
+	}
+	
+public boolean isElementDisplayed() {
+        
+		boolean isPresent = false;
+       
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+        //search for elements and check if list is empty
+        if (driver.findElement(By.cssSelector("div[class='has-error-msg mt-xs-1 text-red is-visible']")).isDisplayed()) {
+            isPresent = true;
+        }
+        //rise back implicitly wait time
+        
+        return isPresent;
+    }
 }

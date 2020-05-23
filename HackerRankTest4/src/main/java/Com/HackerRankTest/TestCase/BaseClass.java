@@ -67,6 +67,7 @@ ReadConfig objReadConfig = new ReadConfig();
 		}
 		
 		driver.get(Url);
+		driver.manage().window().maximize();
 	}
 	
 	@BeforeMethod
@@ -84,7 +85,6 @@ ReadConfig objReadConfig = new ReadConfig();
 		System.out.println("AfterMethod()");
 		
 		
-		driver.quit();
 		
 	}
 	

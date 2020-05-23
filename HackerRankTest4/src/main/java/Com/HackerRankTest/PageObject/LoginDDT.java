@@ -1,7 +1,11 @@
 package Com.HackerRankTest.PageObject;
 
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +22,7 @@ public class LoginDDT {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
     
+		
 	@FindBy(xpath="//*[@id=\"gnav-header-inner\"]/div[4]/nav/ul/li[1]/button")
 	WebElement loginlink;
 	
@@ -33,13 +38,14 @@ public class LoginDDT {
 	
 	public void setEmailaddress(String username)
 	{
-		txtEmailaddress.sendKeys("");
+		
+		txtEmailaddress.clear();
 		txtEmailaddress.sendKeys(username);
 	}
 	
 	public void settxtpassword(String password)
 	{
-		txtpassword.sendKeys("");
+		txtpassword.clear();
 		txtpassword.sendKeys(password);
 	}
 	
@@ -50,9 +56,36 @@ public class LoginDDT {
 	
 	public void loginlink()
 	{
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		loginlink.click();
+		
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//*[@id=\"gnav-header-inner\"]/div[4]/nav/ul/li[1]/button")).click();;
+		
+		/*
+		List<WebElement> options = driver.findElements(By.cssSelector("div.wt-flex-shrink-xs-0>nav>ul>li"));
+		for(WebElement options1 : options)
+		{
+			if(options1.getText().equalsIgnoreCase("Sign in"))
+			{
+				options1.click();
+			}
+		}*/
 	}
+	
+		
+	
+	 public boolean isElementPresent() {
+	        boolean isPresent = true;
+	        
+	        //search for elements and check if list is empty
+	        if (driver.findElements(By.cssSelector("a[aria-label='Your account']")).isEmpty()) {
+	            isPresent = false;
+	        }
+	        //rise back implicitly wait time
+	        
+	        return isPresent;
+	    }
+	
+	
 	
 
 }
