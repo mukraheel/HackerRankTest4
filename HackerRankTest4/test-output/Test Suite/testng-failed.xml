@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]">
-  <test thread-count="5" name="LoginCase(failed)">
+  <test thread-count="5" name="LoginTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Com.HackerRankTest.TestCase.TestCaseAddProduct">
+      <class name="Com.HackerRankTest.TestCase.DDTestCase">
         <methods>
           <include name="Setup"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="testBeforeSuite"/>
-          <include name="AfterTest"/>
           <include name="setExtent"/>
           <include name="setup"/>
+          <include name="LoginDDFReadExcelData"/>
           <include name="testAfterSuite"/>
-          <include name="CaseAddProduct"/>
+          <include name="endReport"/>
         </methods>
-      </class> <!-- Com.HackerRankTest.TestCase.TestCaseAddProduct -->
+      </class> <!-- Com.HackerRankTest.TestCase.DDTestCase -->
     </classes>
-  </test> <!-- LoginCase(failed) -->
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

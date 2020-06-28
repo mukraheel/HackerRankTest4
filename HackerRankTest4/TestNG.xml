@@ -3,14 +3,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Suite">
 
-	<test name="LoginCase">
+	<test name="LoginTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			 <class name="Com.HackerRankTest.TestCase.LoginTest"/> 
-			 <class name="Com.HackerRankTest.TestCase.TestRequiredFilds"/>  
-			 <class name="Com.HackerRankTest.TestCase.DDTestCase"/> 
-			 <class name="Com.HackerRankTest.TestCase.TestCaseAddProduct"/>
-			 
+			 <class name="Com.HackerRankTest.TestCase.DDTestCase"/>
 		</classes>
 	</test>
 </suite>

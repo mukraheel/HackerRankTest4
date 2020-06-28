@@ -18,11 +18,13 @@ WebDriver driver;
 		PageFactory.initElements(driver, this);
 		
 	}
+	
+	@FindBy(css = "button.select-signin")
+	WebElement signinlink;
     
-	@FindBy(xpath="//*[@id=\"join-neu-form\"]/div[1]/div/div[1]/div/button")
+	@FindBy(css = "button.select-register")
 	WebElement Reglink;
-	
-	
+		
 	@FindBy(id="join_neu_email_field")
 	WebElement txtEmailaddress;
 	
@@ -35,12 +37,12 @@ WebDriver driver;
 	@FindBy(name="submit_attempt")
 	WebElement btnLogin;
 	
-	@FindBy(xpath ="//*[@id=\"gnav-header-inner\"]/div[4]/ul/li[4]/a")
+	@FindBy(css ="a[aria-label='Your account']")
 	WebElement profilelink;
 	
-	@FindBy(xpath ="//*[@id=\"sub-nav-user-menu-462857-4\"]")
-	WebElement Logoutlink;
-	
+	@FindBy(linkText ="Sign out")
+	WebElement Signoutlink;
+		
 	public void setEmailaddress(String username)
 	{
 		txtEmailaddress.sendKeys(username);
@@ -64,25 +66,41 @@ WebDriver driver;
 	public void loginlink()
 	{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id=\"gnav-header-inner\"]/div[4]/nav/ul/li[1]/button")).click();;
+		signinlink.click();;
 	}
 	
 	public void Reglink()
 	{
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		Reglink.click();
 	}
 	
 	public void Logout()
 	{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		profilelink.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.linkText("Sign out")).click();
+		if(isElementPresent(By.cssSelector("a[aria-label='Your account']")))
+		{
+			profilelink.click();
+		}
 		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		if(isElementPresent(By.linkText("Sign out")))
+		{
+			Signoutlink.click();
+		}
 	}
 	
-public boolean isElementDisplayed() {
+	public boolean isElementPresent(By by) {
+		  try {
+		    driver.findElement(by);
+		    return true;
+		  }
+		catch (org.openqa.selenium.NoSuchElementException e) {
+		    return false;
+		  }
+		}
+	
+public boolean isElementDisplayed(WebElement element) {
         
 		boolean isPresent = false;
        
